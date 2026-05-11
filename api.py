@@ -11,6 +11,7 @@ GET  /health                  status + counts
 import json
 import os
 import tempfile
+from collections import defaultdict
 from dataclasses import asdict
 from datetime import date, datetime
 from pathlib import Path
@@ -113,6 +114,46 @@ def _update_memory_feedback(alert_id: str, valid: bool, notes: str):
     log_path.write_text(content[:idx] + updated)
 
 
+def _digest_issuer_patterns() -> None:
+    """Rewrite issuer_patterns.md from all saved alerts."""
+    all_alerts = _all_saved_alerts()
+    if not all_alerts:
+        return
+
+    by_issuer: dict[str, list] = defaultdict(list)
+    for a in all_alerts:
+        by_issuer[a["issuer"]].append(a)
+
+    lines = [
+        "# Issuer Patterns",
+        "",
+        f"Auto-generated {date.today().isoformat()} from {len(all_alerts)} saved alerts.",
+        "",
+        "---",
+        "",
+    ]
+
+    for issuer, alerts in sorted(by_issuer.items()):
+        state   = alerts[0].get("state", "?")
+        purpose = alerts[0].get("purpose", "")
+        spreads = [a["spread_bps"] for a in alerts]
+        itype   = "GO" if any(k in purpose for k in ("General Obligation", "GO")) else "Revenue"
+        last    = max(a["generated_at"][:10] for a in alerts)
+
+        lines += [
+            f"### {issuer} ({state})",
+            f"- **Type**: {itype}",
+            f"- **Times flagged**: {len(alerts)}",
+            f"- **Spread range**: {min(spreads)}bps – {max(spreads)}bps"
+            f" (avg {sum(spreads) // len(spreads)}bps)",
+            f"- **Public alerts**: {sum(1 for a in alerts if a.get('is_public'))}",
+            f"- **Last seen**: {last}",
+            "",
+        ]
+
+    (MEMORY_DIR / "issuer_patterns.md").write_text("\n".join(lines))
+
+
 def _fire_webhooks(alerts: list[dict]):
     if not WEBHOOK_URLS or not alerts:
         return
@@ -181,6 +222,7 @@ async def scan(
         _append_to_memory(a)
     if new_alerts:
         background_tasks.add_task(_fire_webhooks, new_alerts)
+        background_tasks.add_task(_digest_issuer_patterns)
 
     return {
         "scanned": len(targets),
@@ -209,6 +251,7 @@ def list_alerts(
 @app.post("/alerts/{alert_id}/feedback")
 def submit_feedback(alert_id: str, body: FeedbackBody):
     _update_memory_feedback(alert_id, body.valid, body.notes)
+    _digest_issuer_patterns()
     return {"alert_id": alert_id, "recorded": True, "valid": body.valid}
 
 
