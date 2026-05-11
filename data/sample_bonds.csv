@@ -1,0 +1,16 @@
+cusip,issuer,state,purpose,issuer_type,par_amount,maturity_date,coupon,ytw,ytm,call_date,call_price,rating_moodys,rating_sp,rating_fitch,last_trade_date,last_trade_price,is_target
+558000AA1,Albuquerque Water Utility Authority,NM,Water & Sewer Revenue,Revenue,8500000,2031-06-01,4.500,4.52,4.61,2028-06-01,100.00,A2,A,,2026-04-15,99.25,true
+145000BB2,Cherokee County School District,GA,General Obligation,GO,12300000,2029-08-01,3.250,3.28,3.28,,,Aa2,AA,,2026-03-22,100.50,true
+502000CC3,Louisiana Children's Medical Center,LA,Hospital Revenue,Revenue,15700000,2033-12-01,5.125,5.18,5.30,2026-12-01,100.00,Baa1,BBB+,,2026-04-28,98.75,true
+559000DD4,Rio Rancho Public Schools,NM,General Obligation,GO,9200000,2030-08-01,3.750,3.82,3.82,,,A1,A+,,2026-04-10,100.25,false
+559000EE5,Bernalillo County NM,NM,Gross Receipts Tax Revenue,Revenue,11000000,2031-02-01,3.850,3.91,3.95,2029-02-01,100.00,A2,A,,2026-03-30,99.75,false
+559000FF6,Santa Fe NM Wastewater,NM,Water & Sewer Revenue,Revenue,7800000,2032-06-01,3.780,3.80,3.88,2030-06-01,100.00,A3,A-,,2026-04-05,99.50,false
+559000GG7,Las Cruces NM Electric,NM,Electric Revenue,Revenue,14500000,2030-10-01,3.900,3.95,3.98,2028-10-01,100.00,A2,A,,2026-04-18,99.80,false
+146000HH8,Forsyth County GA School District,GA,General Obligation,GO,16800000,2028-06-01,3.150,3.19,3.19,,,Aa2,AA,,2026-04-12,100.75,false
+146000II9,Cobb County GA GO,GA,General Obligation,GO,8900000,2030-04-01,3.200,3.22,3.22,,,Aa1,AA+,,2026-04-20,101.00,false
+146000JJ0,Henry County GA Public Schools,GA,General Obligation,GO,13400000,2029-02-01,3.100,3.15,3.15,,,Aa3,AA-,,2026-03-15,100.25,false
+503000KK1,Ochsner Clinic Foundation LA,LA,Hospital Revenue,Revenue,18500000,2032-06-01,4.350,4.38,4.45,2027-06-01,100.00,Baa1,BBB+,,2026-04-22,99.00,false
+503000LL2,Our Lady of the Lake Regional,LA,Hospital Revenue,Revenue,12100000,2034-10-01,4.150,4.20,4.28,2028-10-01,100.00,Baa2,BBB,,2026-04-08,98.50,false
+503000MM3,Willis Knighton Health System LA,LA,Hospital Revenue,Revenue,9800000,2033-06-01,4.050,4.12,4.18,2028-06-01,100.00,Baa1,BBB+,,2026-04-14,99.25,false
+503000NN4,Lafayette General Medical Center,LA,Hospital Revenue,Revenue,17200000,2032-04-01,4.250,4.30,4.36,2027-04-01,100.00,Baa1,BBB,,2026-03-28,98.75,false
+559000OO5,Taos NM Gross Receipts,NM,Gross Receipts Tax Revenue,Revenue,6500000,2031-08-01,3.820,3.88,3.91,2029-08-01,100.00,A2,A-,,2026-04-02,99.60,false

@@ -1,0 +1,56 @@
+[
+  {
+    "alert_id": "MUNI-20260511-0AA1",
+    "cusip": "558000AA1",
+    "generated_at": "2026-05-11T01:13:54",
+    "is_public": false,
+    "issuer": "Albuquerque Water Utility Authority",
+    "state": "NM",
+    "purpose": "Water & Sewer Revenue",
+    "par_amount": 8500000,
+    "ytw": 4.52,
+    "peer_avg_ytw": 3.885,
+    "spread_bps": 63,
+    "peer_count": 4,
+    "maturity_date": "2031-06-01",
+    "rating": "A2/A",
+    "call_risk": "Moderate call risk \u2014 callable in ~2 years at $100.00. Monitor refinancing conditions as call date approaches.",
+    "target_investor": "Conservative tax-exempt income investors with a 5+ year horizon looking for modest spread pickup over benchmark peers.",
+    "red_flag": null,
+    "plain_english": "This $8.5M Albuquerque Water Utility Authority bond is modestly higher-yielding than its peers.\n\nAt 4.52% yield-to-worst, it sits 63 basis points above the 3.88% average for similar A2/A-rated revenue bonds in the 2031 maturity range.\n\nCALL RISK: Moderate call risk \u2014 callable in ~2 years at $100.00. Monitor refinancing conditions as call date approaches.\n\nWHO IT'S FOR: Conservative tax-exempt income investors with a 5+ year horizon looking for modest spread pickup over benchmark peers.",
+    "peers_used": [
+      "559000EE5",
+      "559000FF6",
+      "559000GG7",
+      "559000OO5"
+    ],
+    "anon_id": "b945f1f81f2b"
+  },
+  {
+    "alert_id": "MUNI-20260511-0CC3",
+    "cusip": "502000CC3",
+    "generated_at": "2026-05-11T01:13:54",
+    "is_public": true,
+    "issuer": "Louisiana Children's Medical Center",
+    "state": "LA",
+    "purpose": "Hospital Revenue",
+    "par_amount": 15700000,
+    "ytw": 5.18,
+    "peer_avg_ytw": 4.25,
+    "spread_bps": 93,
+    "peer_count": 4,
+    "maturity_date": "2033-12-01",
+    "rating": "Baa1/BBB+",
+    "call_risk": "HIGH call risk \u2014 issuer can redeem in ~6 months at $100.00. The YTW already reflects this worst-case scenario.",
+    "target_investor": "Income-focused investors with a 8+ year horizon who are comfortable with small-issuer liquidity constraints and seeking above-market tax-exempt yield.",
+    "red_flag": "Near-term call risk (2026-12-01) may erode the yield advantage if issuer refinances.",
+    "plain_english": "This $15.7M Louisiana Children's Medical Center bond is notably higher-yielding than its peers.\n\nAt 5.18% yield-to-worst, it sits 93 basis points above the 4.25% average for similar Baa1/BBB+-rated revenue bonds in the 2033 maturity range.\n\nCALL RISK: HIGH call risk \u2014 issuer can redeem in ~6 months at $100.00. The YTW already reflects this worst-case scenario.\n\nWHO IT'S FOR: Income-focused investors with a 8+ year horizon who are comfortable with small-issuer liquidity constraints and seeking above-market tax-exempt yield.\n\nRED FLAG: Near-term call risk (2026-12-01) may erode the yield advantage if issuer refinances.",
+    "peers_used": [
+      "503000KK1",
+      "503000LL2",
+      "503000MM3",
+      "503000NN4"
+    ],
+    "anon_id": "10cd9c82c661"
+  }
+]

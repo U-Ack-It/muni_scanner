@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Municipal Bond Alert — {{ issuer }}</title>
+<style>
+  body { margin: 0; padding: 0; background: #f4f4f5; font-family: Georgia, 'Times New Roman', serif; color: #1a1a2e; }
+  .wrapper { max-width: 600px; margin: 32px auto; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }
+
+  /* Header */
+  .header { background: #1a1a2e; padding: 28px 32px; }
+  .header .label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7ecac8; margin-bottom: 6px; }
+  .header h1 { margin: 0; font-size: 20px; color: #ffffff; font-weight: 700; line-height: 1.3; }
+  .header .sub { margin-top: 6px; font-size: 13px; color: #a0aec0; font-family: 'Segoe UI', Arial, sans-serif; }
+  .badge { display: inline-block; font-size: 10px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 12px; margin-top: 10px; }
+  .badge-public     { background: #48bb78; color: #ffffff; }
+  .badge-subscriber { background: #ed8936; color: #ffffff; }
+
+  /* Metrics bar */
+  .metrics { display: table; width: 100%; background: #f7f8fc; border-bottom: 2px solid #e2e8f0; }
+  .metric  { display: table-cell; text-align: center; padding: 18px 8px; border-right: 1px solid #e2e8f0; }
+  .metric:last-child { border-right: none; }
+  .metric .val  { font-size: 22px; font-weight: 700; color: #1a1a2e; font-family: 'Segoe UI', Arial, sans-serif; }
+  .metric .val.green { color: #276749; }
+  .metric .lbl  { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #718096; font-family: 'Segoe UI', Arial, sans-serif; margin-top: 3px; }
+
+  /* Body */
+  .body { padding: 28px 32px; }
+  .body p { font-size: 15px; line-height: 1.75; margin: 0 0 16px; color: #2d3748; }
+  .section-title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #718096; margin: 24px 0 8px; border-top: 1px solid #e2e8f0; padding-top: 16px; }
+
+  /* Detail table */
+  .detail-table { width: 100%; border-collapse: collapse; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+  .detail-table tr td { padding: 7px 0; color: #4a5568; border-bottom: 1px solid #f0f0f0; }
+  .detail-table tr td:first-child { color: #718096; width: 38%; }
+  .detail-table tr td:last-child { font-weight: 600; color: #1a1a2e; }
+
+  /* Red flag */
+  .red-flag { background: #fff5f5; border-left: 4px solid #fc8181; padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 20px 0; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #742a2a; line-height: 1.5; }
+  .red-flag strong { display: block; margin-bottom: 4px; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; color: #c53030; }
+
+  /* Target investor */
+  .investor-box { background: #ebf8ff; border-left: 4px solid #4299e1; padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 20px 0; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #2b6cb0; line-height: 1.5; }
+  .investor-box strong { display: block; margin-bottom: 4px; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }
+
+  /* Disclaimer */
+  .footer { background: #f7f8fc; border-top: 1px solid #e2e8f0; padding: 20px 32px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; color: #a0aec0; line-height: 1.6; }
+  .footer a { color: #718096; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="label">Municipal Bond Anomaly Alert</div>
+    <h1>{{ issuer }}</h1>
+    <div class="sub">{{ state }} &middot; {{ purpose }} &middot; Matures {{ maturity_date }}</div>
+    <span class="badge {{ 'badge-public' if is_public else 'badge-subscriber' }}">
+      {{ 'Public' if is_public else 'Subscriber Only' }}
+    </span>
+  </div>
+
+  <!-- Metrics bar -->
+  <div class="metrics">
+    <div class="metric">
+      <div class="val green">{{ ytw }}%</div>
+      <div class="lbl">YTW</div>
+    </div>
+    <div class="metric">
+      <div class="val">{{ peer_avg_ytw }}%</div>
+      <div class="lbl">Peer Avg</div>
+    </div>
+    <div class="metric">
+      <div class="val green">+{{ spread_bps }}bps</div>
+      <div class="lbl">Spread</div>
+    </div>
+    <div class="metric">
+      <div class="val">{{ rating }}</div>
+      <div class="lbl">Rating</div>
+    </div>
+    <div class="metric">
+      <div class="val">${{ par_millions }}M</div>
+      <div class="lbl">Par Size</div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <div class="section-title">Summary</div>
+    <p>{{ summary_paragraph }}</p>
+
+    <div class="section-title">Call Risk</div>
+    <p>{{ call_risk }}</p>
+
+    <div class="section-title">Bond Details</div>
+    <table class="detail-table">
+      <tr><td>CUSIP</td><td>{{ cusip }}</td></tr>
+      <tr><td>Issuer</td><td>{{ issuer }}</td></tr>
+      <tr><td>State</td><td>{{ state }}</td></tr>
+      <tr><td>Issuer Type</td><td>{{ issuer_type }}</td></tr>
+      <tr><td>Par Amount</td><td>${{ par_formatted }}</td></tr>
+      <tr><td>Coupon</td><td>{{ coupon }}%</td></tr>
+      <tr><td>Maturity</td><td>{{ maturity_date }}</td></tr>
+      <tr><td>Call Date</td><td>{{ call_date_display }}</td></tr>
+      <tr><td>Call Price</td><td>{{ call_price_display }}</td></tr>
+      <tr><td>Rating (Moody's/S&P)</td><td>{{ rating }}</td></tr>
+      <tr><td>Peers compared</td><td>{{ peer_count }} bonds</td></tr>
+      <tr><td>Alert ID</td><td style="font-family:monospace;font-size:11px">{{ alert_id }}</td></tr>
+    </table>
+
+    {% if red_flag %}
+    <div class="red-flag">
+      <strong>&#9888; Red Flag</strong>
+      {{ red_flag }}
+    </div>
+    {% endif %}
+
+    <div class="investor-box">
+      <strong>&#128100; Who This Is For</strong>
+      {{ target_investor }}
+    </div>
+
+  </div>
+
+  <!-- Footer / Disclaimer -->
+  <div class="footer">
+    <strong>IMPORTANT DISCLAIMER:</strong> This alert is for informational purposes only and does not
+    constitute investment advice, a recommendation to buy or sell any security, or an offer to engage
+    in any investment strategy. Municipal bonds involve risks including credit risk, interest rate risk,
+    call risk, and liquidity risk. Past yield spreads are not indicative of future performance.
+    Always consult a qualified financial advisor before making investment decisions.
+    Information derived from public sources; accuracy is not guaranteed.
+    <br><br>
+    Generated {{ generated_at }} &middot; Alert {{ alert_id }}
+  </div>
+
+</div>
+</body>
+</html>
