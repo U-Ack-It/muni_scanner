@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.bak
+*.bak2
+*.bak3
+.venv/
+venv/
+logs/*.log
+clean.csv
+mx_report.csv
+dealer_check.csv
+prospects_clean.csv
+output/alerts_*.json
