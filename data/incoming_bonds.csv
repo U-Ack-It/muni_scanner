@@ -1,0 +1,5 @@
+cusip,issuer,state,purpose,issuer_type,par_amount,maturity_date,coupon,ytw,ytm,call_date,call_price,rating_moodys,rating_sp,rating_fitch,last_trade_date,last_trade_price,is_target,source_dealer,extracted_at
+064080KF5,Austin TX ISD,TX,General Obligation,GO,5000000,2032-02-01,4.0,3.85,3.85,2030-02-01,100.0,Aaa,AAA,,2026-05-11,101.25,true,RaymondJames,2026-05-11T08:47:17
+931546DM2,Wake County NC,NC,General Obligation School,GO,8750000,2034-06-01,3.5,3.72,3.72,,,Aaa,AAA,,2026-05-11,100.5,true,RaymondJames,2026-05-11T08:47:17
+452151RK8,Jefferson Parish LA,LA,Hospital Revenue,Revenue,12400000,2035-12-01,5.25,5.41,5.41,2029-12-01,100.0,A2,A,,2026-05-11,98.75,true,RaymondJames,2026-05-11T08:47:17
+677081AB3,Ohio Water Dev Authority,OH,Water Revenue,Revenue,6100000,2031-06-01,3.875,3.91,3.91,,,Aa2,AA,,2026-05-11,99.875,true,RaymondJames,2026-05-11T08:47:17

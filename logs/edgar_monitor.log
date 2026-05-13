@@ -1,0 +1,51 @@
+[2026-05-11 18:44] Monitoring 3 issuers in EDGAR...
+[2026-05-11 18:44]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Louisiana+Children%27s+Medical+Center%22&dateRange=custom&startdt=2026-05-09&enddt=2026-05-11&hits.hits._source=file_date%2Cperiod_of_report%2Centity_name%2Cfile_num%2Cform_type%2Cperiod_of_report
+[2026-05-11 18:44] New relevant filings: 0
+[2026-05-11 18:45] Monitoring 3 issuers in EDGAR...
+[2026-05-11 18:45] New relevant filings: 0
+[2026-05-11 22:00] Monitoring 3 issuers in EDGAR...
+[2026-05-11 22:00] New relevant filings: 0
+[2026-05-11 22:00] Monitoring 3 issuers in EDGAR...
+[2026-05-11 22:00] New relevant filings: 0
+[2026-05-12 04:00] Monitoring 3 issuers in EDGAR...
+[2026-05-12 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Louisiana+Children%27s+Medical+Center%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 04:00] New relevant filings: 0
+[2026-05-12 04:00] Monitoring 3 issuers in EDGAR...
+[2026-05-12 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Louisiana+Children%27s+Medical+Center%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 04:00] New relevant filings: 0
+[2026-05-12 16:00] Monitoring 3 issuers in EDGAR...
+[2026-05-12 16:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Louisiana+Children%27s+Medical+Center%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 16:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 16:00] New relevant filings: 0
+[2026-05-12 16:00] Monitoring 3 issuers in EDGAR...
+[2026-05-12 16:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Louisiana+Children%27s+Medical+Center%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 16:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 16:00] New relevant filings: 0
+[2026-05-12 22:00] Monitoring 3 issuers in EDGAR...
+[2026-05-12 22:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 22:00] New relevant filings: 0
+[2026-05-12 22:00] Monitoring 3 issuers in EDGAR...
+[2026-05-12 22:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-10&enddt=2026-05-12
+[2026-05-12 22:00] New relevant filings: 0
+[2026-05-13 04:00] Monitoring 3 issuers in EDGAR...
+[2026-05-13 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Albuquerque+Water+Utility+Authority%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Louisiana+Children%27s+Medical+Center%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 04:00] New relevant filings: 0
+[2026-05-13 04:00] Monitoring 3 issuers in EDGAR...
+[2026-05-13 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Albuquerque+Water+Utility+Authority%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Louisiana+Children%27s+Medical+Center%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 04:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 04:00] New relevant filings: 0
+[2026-05-13 10:00] Monitoring 3 issuers in EDGAR...
+[2026-05-13 10:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Albuquerque+Water+Utility+Authority%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 10:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Louisiana+Children%27s+Medical+Center%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 10:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 10:00] New relevant filings: 0
+[2026-05-13 10:00] Monitoring 3 issuers in EDGAR...
+[2026-05-13 10:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Albuquerque+Water+Utility+Authority%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 10:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Louisiana+Children%27s+Medical+Center%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 10:00]   EDGAR search error: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=%22Jefferson+Parish+LA%22&startdt=2026-05-11&enddt=2026-05-13
+[2026-05-13 10:00] New relevant filings: 0

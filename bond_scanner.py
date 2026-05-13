@@ -24,7 +24,16 @@ import os
 import sys
 from dataclasses import dataclass, asdict, field
 from datetime import date, datetime
+from pathlib import Path
 from typing import Optional
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+try:
+    from src.treasury_curve import get_muni_benchmark_yield as _get_muni_benchmark
+    _TREASURY_AVAILABLE = True
+except ImportError:
+    _TREASURY_AVAILABLE = False
 
 
 # ---------------------------------------------------------------------------
@@ -341,22 +350,46 @@ def _broad_type(issuer_type: str) -> str:
 # Alert generation
 # ---------------------------------------------------------------------------
 
-def detect_anomaly(target: BondRecord, universe: list[BondRecord]) -> Optional[AnomalyAlert]:
+def detect_anomaly(
+    target: BondRecord,
+    universe: list[BondRecord],
+    threshold: int = ANOMALY_THRESHOLD_BPS,
+) -> Optional[AnomalyAlert]:
     """
-    Compare target to peers. Returns AnomalyAlert if spread ≥ threshold, else None.
+    Compare target to peers and/or Treasury-derived muni benchmark.
+    Returns AnomalyAlert if spread ≥ threshold, else None.
     """
     if target.par_amount > MAX_PAR:
         return None
 
+    # --- Primary: compare to CSV peers (existing logic) ---
     peers = find_peers(target, universe)
-    if len(peers) < MIN_PEER_COUNT:
-        print(f"  ⚠️  {target.cusip}: only {len(peers)} peer(s) found — skipping")
-        return None
 
-    peer_avg_ytw = sum(p.ytw for p in peers) / len(peers)
-    spread_bps   = round((target.ytw - peer_avg_ytw) * 100)
+    if len(peers) >= MIN_PEER_COUNT:
+        peer_avg_ytw = sum(p.ytw for p in peers) / len(peers)
+    else:
+        # --- Fallback: compare to live Treasury-derived muni benchmark ---
+        if not _TREASURY_AVAILABLE:
+            print(f"  ⚠️  {target.cusip}: no CSV peers and treasury_curve unavailable — skipping")
+            return None
+        try:
+            mat_days = (date.fromisoformat(target.maturity_date) - date.today()).days
+            mat_years = max(0.5, mat_days / 365.25)
+            rating = target.rating_moodys or target.rating_sp or "A2"
+            peer_avg_ytw = _get_muni_benchmark(mat_years, rating)
+            peers = []   # signal: benchmark used, not CSV peers
+            print(f"  📐 {target.cusip}: no CSV peers — using Treasury benchmark "
+                  f"({mat_years:.1f}yr {rating} → {peer_avg_ytw:.3f}%)")
+        except Exception as exc:
+            print(f"  ⚠️  {target.cusip}: benchmark error ({exc}) — skipping")
+            return None
 
-    if spread_bps < ANOMALY_THRESHOLD_BPS:
+    if not peers and len([]) < 1:
+        pass  # benchmark path — always valid with 1 point
+
+    spread_bps = round((target.ytw - peer_avg_ytw) * 100)
+
+    if spread_bps < threshold:
         return None
 
     alert_id = f"MUNI-{date.today().strftime('%Y%m%d')}-{target.cusip[-4:]}"
@@ -379,7 +412,7 @@ def detect_anomaly(target: BondRecord, universe: list[BondRecord]) -> Optional[A
         ytw           = target.ytw,
         peer_avg_ytw  = round(peer_avg_ytw, 4),
         spread_bps    = spread_bps,
-        peer_count    = len(peers),
+        peer_count    = len(peers) if peers else -1,  # -1 = Treasury benchmark used
         maturity_date = target.maturity_date,
         rating        = target.rating_display,
         call_risk     = call_risk,
@@ -545,11 +578,22 @@ if __name__ == "__main__":
     print(f"Scanning {len(targets)} target bond(s) against "
           f"{len(non_targets)} peer bond(s)...\n")
 
-    # Detect anomalies
+    # Detect anomalies — adjust threshold by macro quadrant (Gave framework)
     threshold = args.threshold
+    try:
+        import sys as _sys
+        _sys.path.insert(0, "/home/u-ack-it/Projects/ouroboros.v2")
+        from src.sentiment.macro_quadrant import get_muni_threshold_adjustment, get_quadrant
+        adj = get_muni_threshold_adjustment()
+        if adj != 0:
+            q = get_quadrant()
+            print(f"  📐 Macro quadrant {q.quadrant} ({q.label}): threshold adjusted {adj:+.0f} bps")
+            threshold = int(threshold + adj)
+    except Exception:
+        pass
     alerts = []
     for bond in targets:
-        alert = detect_anomaly(bond, non_targets)
+        alert = detect_anomaly(bond, non_targets, threshold=threshold)
         if alert:
             if args.public_only and not alert.is_public:
                 continue

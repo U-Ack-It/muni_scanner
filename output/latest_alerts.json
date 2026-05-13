@@ -1,0 +1,24 @@
+[
+  {
+    "alert_id": "MUNI-20260511-1RK8",
+    "cusip": "452151RK8",
+    "generated_at": "2026-05-11T10:42:32",
+    "is_public": true,
+    "issuer": "Jefferson Parish LA",
+    "state": "LA",
+    "purpose": "Hospital Revenue",
+    "par_amount": 12400000.0,
+    "ytw": 5.41,
+    "peer_avg_ytw": 4.1368,
+    "spread_bps": 127,
+    "peer_count": -1,
+    "maturity_date": "2035-12-01",
+    "rating": "A2/A",
+    "call_risk": "Moderate call risk \u2014 callable in ~3 years at $100.00. Monitor refinancing conditions as call date approaches.",
+    "target_investor": "Income-focused investors with a 10+ year horizon who are comfortable with small-issuer liquidity constraints and seeking above-market tax-exempt yield.",
+    "red_flag": "Thin peer group (0 comps) \u2014 spread may not fully reflect market.",
+    "plain_english": "This $12.4M Jefferson Parish LA bond is notably higher-yielding than its peers.\n\nAt 5.41% yield-to-worst, it sits 127 basis points above the 4.14% average for similar A2/A-rated revenue bonds in the 2035 maturity range.\n\nCALL RISK: Moderate call risk \u2014 callable in ~3 years at $100.00. Monitor refinancing conditions as call date approaches.\n\nWHO IT'S FOR: Income-focused investors with a 10+ year horizon who are comfortable with small-issuer liquidity constraints and seeking above-market tax-exempt yield.\n\nRED FLAG: Thin peer group (0 comps) \u2014 spread may not fully reflect market.",
+    "peers_used": [],
+    "anon_id": "ba9f71609206"
+  }
+]

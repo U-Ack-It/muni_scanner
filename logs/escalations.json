@@ -1,0 +1,753 @@
+[
+  {
+    "id": "muni-esc-20260512-001",
+    "timestamp": "2026-05-12T19:10:48.946580+00:00",
+    "project": "muni_scanner",
+    "type": "API_SERVICE_DOWN",
+    "severity": "HIGH",
+    "detail": "No process found serving muni_scanner API on port 8000. POST /scan cannot be triggered. Email delivery via API is unavailable. Expected: uvicorn api:app --port 8000",
+    "hypothesis": "uvicorn was never started or crashed. daily_scan.sh calls bond_scanner.py directly (CLI path), but the API service must be running for webhook delivery, feedback, and /digest/send endpoints.",
+    "files_to_check": [
+      "api.py",
+      "AGENTS.md"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-002",
+    "timestamp": "2026-05-12T19:10:48.948572+00:00",
+    "project": "muni_scanner",
+    "type": "ALERT_DROUGHT",
+    "severity": "MEDIUM",
+    "detail": "No output/alerts_YYYYMMDD.json file produced today (2026-05-12). Last scan output was 1 day(s) ago (sample). daily_scan.sh may not be scheduled or bond_scanner.py is failing.",
+    "hypothesis": "daily_scan.sh is not being called via cron or manual trigger. Alternatively, bond_scanner.py crashed on the CSV/mock data load, or the data/ directory has no incoming CSV to process.",
+    "files_to_check": [
+      "daily_scan.sh",
+      "bond_scanner.py",
+      "data/"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-003",
+    "timestamp": "2026-05-12T19:10:48.948938+00:00",
+    "project": "muni_scanner",
+    "type": "MEMORY_NOT_UPDATING",
+    "severity": "MEDIUM",
+    "detail": "3 alert ID(s) exist in output/ files but are absent from memory/alerts_log.md. Missing: ['MUNI-20260511-0AA1', 'MUNI-20260511-0CC3', 'MUNI-20260511-1RK8']. alerts_log.md currently has 4 non-header lines.",
+    "hypothesis": "daily_scan.sh calls bond_scanner.py directly (CLI), which writes output JSON but does NOT call _append_to_memory(). That function only runs via the API's POST /scan path (api.py:132). The CLI and API paths are diverged \u2014 memory only updates via API.",
+    "files_to_check": [
+      "api.py",
+      "bond_scanner.py",
+      "daily_scan.sh"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-004",
+    "timestamp": "2026-05-12T19:10:48.949135+00:00",
+    "project": "muni_scanner",
+    "type": "REGIME_COUPLING_LOST",
+    "severity": "LOW",
+    "detail": "Ouroboros regime snapshot is 436 min old (label=NEUTRAL, VIX=18.9). muni_scanner will revert to NEUTRAL threshold at next scan.",
+    "hypothesis": "Ouroboros heartbeat is in zombie hours \u2014 snapshot age during off-hours is expected. Only critical if a scan runs while stale.",
+    "files_to_check": [
+      "api.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-005",
+    "timestamp": "2026-05-12T19:10:48.965349+00:00",
+    "project": "muni_scanner",
+    "type": "EMAIL_AGENT_DUPLICATE",
+    "severity": "MEDIUM",
+    "detail": "20/39 consecutive log lines in bond_email_agent.log are exact duplicates. Active bond_email_agent processes: 1. Sample duplicate: '[15:05:26] No unread bond emails.'",
+    "hypothesis": "bond_email_agent.py was started twice (e.g. from two terminal sessions or a restart without killing the previous instance). Both processes log to the same file simultaneously. No emails are duplicated yet, but if both processes pick up the same unread message, double delivery is likely.",
+    "files_to_check": [
+      "bond_email_agent.py",
+      "logs/bond_email_agent.log"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-006",
+    "timestamp": "2026-05-12T19:29:27.812548+00:00",
+    "project": "bondanomaly",
+    "type": "OUTREACH_DUPLICATE",
+    "severity": "HIGH",
+    "detail": "20 prospect(s) received duplicate outreach emails:\n  john@cumber.com: 2x (gap 1.0h)\n  service@bellehaven.com: 2x (gap 1.0h)\n  cr@breckinridge.com: 2x (gap 1.0h)\n  smcshea@sageadvisory.com: 2x (gap 1.0h)\n  info@smithcapitalinvestors.com: 2x (gap 1.0h)\n  ...\nRoot cause: ria_outreach.py has no guard against re-sending to addresses already in outreach_log.csv.",
+    "hypothesis": "ria_outreach.py reads all rows from prospects.csv and sends without cross-checking outreach_log.csv. Running the script twice (or from two terminals within the same session) sends the same email to every prospect again. The fix is to load the log and skip any email already present before calling the Gmail API.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-007",
+    "timestamp": "2026-05-12T19:29:27.812876+00:00",
+    "project": "bondanomaly",
+    "type": "LOG_CORRUPTION",
+    "severity": "MEDIUM",
+    "detail": "1 row(s) in outreach_log.csv have a non-ISO sent_at value:\n  email=sditursi@oneoakcapitalmgmt.com sent_at='there'\nAffected rows are invisible to nudge eligibility logic \u2014 nudge_sent timestamps on corrupt rows may fire incorrectly.",
+    "hypothesis": "prospect_hunter.py appends newly discovered prospects and may trigger outreach inline. If the contact_name contains a comma and the CSV write is unquoted, field values shift right \u2014 a name like 'LLC' lands in sent_at. Alternatively, 'there' is the name fallback in ria_outreach.py EMAIL_BODY.format() leaking into the log write call.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "prospect_hunter.py",
+      "outreach_log.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-008",
+    "timestamp": "2026-05-12T19:29:27.814463+00:00",
+    "project": "bondanomaly",
+    "type": "FOLLOWUP_CRON_BROKEN",
+    "severity": "HIGH",
+    "detail": "ria_followup.py cron entry has no working-directory prefix:\n  '0 9 * * 1-5 python3 ria_followup.py >> logs/ria_followup.log 2>&1'\nCron runs from $HOME by default. The relative log redirect 'logs/ria_followup.log' writes to ~/logs/ (or fails). SEND_LOG uses Path(__file__).parent which resolves correctly, but TOKEN_PATH = Path.home() / 'gallerysense/token.pickle' may not exist if gallerysense is not in $HOME.",
+    "hypothesis": "The cron was created with 'python3 ria_followup.py' without a preceding 'cd /home/u-ack-it/Projects/muni_scanner &&'. Output goes to ~/logs/ria_followup.log (may not exist), and if the Gmail token path differs, authentication fails silently.",
+    "files_to_check": [
+      "ria_followup.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-009",
+    "timestamp": "2026-05-12T19:29:27.815298+00:00",
+    "project": "bondanomaly",
+    "type": "PROSPECT_QUALITY_DRIFT",
+    "severity": "MEDIUM",
+    "detail": "11 prospect(s) in prospects.csv are low-quality targets (generic email or large asset manager, not boutique RIA):\n  Belle Haven Investments <service@bellehaven.com> [generic prefix]\n  Smith Capital Investors <info@smithcapitalinvestors.com> [generic prefix]\n  Reinhart Partners <info@reinhart-partnersinc.com> [generic prefix]\n  Aquila Group of Funds <info@aquilafunds.com> [generic prefix]\n  Segall Bryant & Hamill <contactus@sbhic.com> [generic prefix]\n  Hennion & Walsh <info@hennionandwalsh.com> [generic prefix]\nThese will dilute the $299/month pitch \u2014 Goldman Sachs won't subscribe.",
+    "hypothesis": "prospect_hunter.py uses Perplexity to discover firms then scrapes the first email found on the homepage. Large managers have generic emails (info@, compliance@) and irrelevant decision-makers. The hunter lacks a quality filter for firm AUM size or email role.",
+    "files_to_check": [
+      "prospect_hunter.py",
+      "prospects.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-010",
+    "timestamp": "2026-05-12T19:29:27.817850+00:00",
+    "project": "bondanomaly",
+    "type": "NO_CONVERSION_TRACKING",
+    "severity": "MEDIUM",
+    "detail": "outreach_log.csv tracks outreach (44 rows) but has no 'converted', 'subscribed', or 'stripe_customer' column. There is no way to know how many prospects became $299/month subscribers. Stripe-reading code found in: ['/home/u-ack-it/Projects/muni_scanner/ria_followup.py', '/home/u-ack-it/Projects/muni_scanner/ria_outreach.py', '/home/u-ack-it/Projects/muni_scanner/supervisor/l3_fixer_bondanomaly.py', '/home/u-ack-it/Projects/muni_scanner/supervisor/l2_bondanomaly.py'].",
+    "hypothesis": "The Stripe payment link (buy.stripe.com/...) handles checkout, but no Stripe webhook receiver or API poller exists to match subscriber emails against the prospect list. Revenue is invisible to the outreach pipeline.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv",
+      "stripe_setup.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-011",
+    "timestamp": "2026-05-13T01:12:00.053465+00:00",
+    "project": "muni_scanner",
+    "type": "API_SERVICE_DOWN",
+    "severity": "HIGH",
+    "detail": "No process found serving muni_scanner API on port 8000. POST /scan cannot be triggered. Email delivery via API is unavailable. Expected: uvicorn api:app --port 8000",
+    "hypothesis": "uvicorn was never started or crashed. daily_scan.sh calls bond_scanner.py directly (CLI path), but the API service must be running for webhook delivery, feedback, and /digest/send endpoints.",
+    "files_to_check": [
+      "api.py",
+      "AGENTS.md"
+    ],
+    "status": "RESOLVED",
+    "resolution": "**Diagnosis: muni-esc-20260512-011 \u2014 operational, not a code defect.**\n\n- Verified: nothing listens on :8000; no `uvicorn api:app` process; no `logs/api*.log` ever created \u2192 service was never launched, not crashed.\n- `api.py` is structurally fine (`app = FastAPI(...)` at module top, imports resolve).\n- `daily_scan.sh` is a pure CLI pipeline and does not depend on the API; it also does not start it. `AGENTS.md` documents the launch command but no systemd/cron/supervisor entry exists for it (asymm",
+    "resolved_at": "2026-05-13T01:12:32.627536+00:00"
+  },
+  {
+    "id": "muni-esc-20260512-012",
+    "timestamp": "2026-05-13T01:12:00.053958+00:00",
+    "project": "muni_scanner",
+    "type": "ALERT_DROUGHT",
+    "severity": "MEDIUM",
+    "detail": "No output/alerts_YYYYMMDD.json file produced today (2026-05-12). Last scan output was 1 day(s) ago (sample). daily_scan.sh may not be scheduled or bond_scanner.py is failing.",
+    "hypothesis": "daily_scan.sh is not being called via cron or manual trigger. Alternatively, bond_scanner.py crashed on the CSV/mock data load, or the data/ directory has no incoming CSV to process.",
+    "files_to_check": [
+      "daily_scan.sh",
+      "bond_scanner.py",
+      "data/"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-013",
+    "timestamp": "2026-05-13T01:12:00.055475+00:00",
+    "project": "muni_scanner",
+    "type": "MEMORY_NOT_UPDATING",
+    "severity": "MEDIUM",
+    "detail": "3 alert ID(s) exist in output/ files but are absent from memory/alerts_log.md. Missing: ['MUNI-20260511-0AA1', 'MUNI-20260511-0CC3', 'MUNI-20260511-1RK8']. alerts_log.md currently has 4 non-header lines.",
+    "hypothesis": "daily_scan.sh calls bond_scanner.py directly (CLI), which writes output JSON but does NOT call _append_to_memory(). That function only runs via the API's POST /scan path (api.py:132). The CLI and API paths are diverged \u2014 memory only updates via API.",
+    "files_to_check": [
+      "api.py",
+      "bond_scanner.py",
+      "daily_scan.sh"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-014",
+    "timestamp": "2026-05-13T01:12:00.055761+00:00",
+    "project": "muni_scanner",
+    "type": "REGIME_COUPLING_LOST",
+    "severity": "LOW",
+    "detail": "Ouroboros regime snapshot is 251 min old (label=BULL, VIX=17.99). muni_scanner will revert to NEUTRAL threshold at next scan.",
+    "hypothesis": "Ouroboros heartbeat is in zombie hours \u2014 snapshot age during off-hours is expected. Only critical if a scan runs while stale.",
+    "files_to_check": [
+      "api.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-015",
+    "timestamp": "2026-05-13T01:12:00.068461+00:00",
+    "project": "muni_scanner",
+    "type": "EMAIL_AGENT_DUPLICATE",
+    "severity": "MEDIUM",
+    "detail": "20/39 consecutive log lines in bond_email_agent.log are exact duplicates. Active bond_email_agent processes: 1. Sample duplicate: '[21:05:36] No unread bond emails.'",
+    "hypothesis": "bond_email_agent.py was started twice (e.g. from two terminal sessions or a restart without killing the previous instance). Both processes log to the same file simultaneously. No emails are duplicated yet, but if both processes pick up the same unread message, double delivery is likely.",
+    "files_to_check": [
+      "bond_email_agent.py",
+      "logs/bond_email_agent.log"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-016",
+    "timestamp": "2026-05-13T01:27:32.666393+00:00",
+    "project": "muni_scanner",
+    "type": "API_SERVICE_DOWN",
+    "severity": "HIGH",
+    "detail": "No process found serving muni_scanner API on port 8000. POST /scan cannot be triggered. Email delivery via API is unavailable. Expected: uvicorn api:app --port 8000",
+    "hypothesis": "uvicorn was never started or crashed. daily_scan.sh calls bond_scanner.py directly (CLI path), but the API service must be running for webhook delivery, feedback, and /digest/send endpoints.",
+    "files_to_check": [
+      "api.py",
+      "AGENTS.md"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-017",
+    "timestamp": "2026-05-13T01:43:18.357685+00:00",
+    "project": "bondanomaly",
+    "type": "OUTREACH_DUPLICATE",
+    "severity": "HIGH",
+    "detail": "20 prospect(s) received duplicate outreach emails:\n  john@cumber.com: 2x (gap 1.0h)\n  service@bellehaven.com: 2x (gap 1.0h)\n  cr@breckinridge.com: 2x (gap 1.0h)\n  smcshea@sageadvisory.com: 2x (gap 1.0h)\n  info@smithcapitalinvestors.com: 2x (gap 1.0h)\n  ...\nRoot cause: ria_outreach.py has no guard against re-sending to addresses already in outreach_log.csv.",
+    "hypothesis": "ria_outreach.py reads all rows from prospects.csv and sends without cross-checking outreach_log.csv. Running the script twice (or from two terminals within the same session) sends the same email to every prospect again. The fix is to load the log and skip any email already present before calling the Gmail API.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-018",
+    "timestamp": "2026-05-13T01:43:18.358127+00:00",
+    "project": "bondanomaly",
+    "type": "LOG_CORRUPTION",
+    "severity": "MEDIUM",
+    "detail": "1 row(s) in outreach_log.csv have a non-ISO sent_at value:\n  email=sditursi@oneoakcapitalmgmt.com sent_at='there'\nAffected rows are invisible to nudge eligibility logic \u2014 nudge_sent timestamps on corrupt rows may fire incorrectly.",
+    "hypothesis": "prospect_hunter.py appends newly discovered prospects and may trigger outreach inline. If the contact_name contains a comma and the CSV write is unquoted, field values shift right \u2014 a name like 'LLC' lands in sent_at. Alternatively, 'there' is the name fallback in ria_outreach.py EMAIL_BODY.format() leaking into the log write call.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "prospect_hunter.py",
+      "outreach_log.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-019",
+    "timestamp": "2026-05-13T01:43:18.361468+00:00",
+    "project": "bondanomaly",
+    "type": "FOLLOWUP_CRON_BROKEN",
+    "severity": "HIGH",
+    "detail": "ria_followup.py cron entry has no working-directory prefix:\n  '0 9 * * 1-5 python3 ria_followup.py >> logs/ria_followup.log 2>&1'\nCron runs from $HOME by default. The relative log redirect 'logs/ria_followup.log' writes to ~/logs/ (or fails). SEND_LOG uses Path(__file__).parent which resolves correctly, but TOKEN_PATH = Path.home() / 'gallerysense/token.pickle' may not exist if gallerysense is not in $HOME.",
+    "hypothesis": "The cron was created with 'python3 ria_followup.py' without a preceding 'cd /home/u-ack-it/Projects/muni_scanner &&'. Output goes to ~/logs/ria_followup.log (may not exist), and if the Gmail token path differs, authentication fails silently.",
+    "files_to_check": [
+      "ria_followup.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-020",
+    "timestamp": "2026-05-13T01:43:18.362348+00:00",
+    "project": "bondanomaly",
+    "type": "PROSPECT_QUALITY_DRIFT",
+    "severity": "MEDIUM",
+    "detail": "11 prospect(s) in prospects.csv are low-quality targets (generic email or large asset manager, not boutique RIA):\n  Belle Haven Investments <service@bellehaven.com> [generic prefix]\n  Smith Capital Investors <info@smithcapitalinvestors.com> [generic prefix]\n  Reinhart Partners <info@reinhart-partnersinc.com> [generic prefix]\n  Aquila Group of Funds <info@aquilafunds.com> [generic prefix]\n  Segall Bryant & Hamill <contactus@sbhic.com> [generic prefix]\n  Hennion & Walsh <info@hennionandwalsh.com> [generic prefix]\nThese will dilute the $299/month pitch \u2014 Goldman Sachs won't subscribe.",
+    "hypothesis": "prospect_hunter.py uses Perplexity to discover firms then scrapes the first email found on the homepage. Large managers have generic emails (info@, compliance@) and irrelevant decision-makers. The hunter lacks a quality filter for firm AUM size or email role.",
+    "files_to_check": [
+      "prospect_hunter.py",
+      "prospects.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260512-021",
+    "timestamp": "2026-05-13T01:43:18.365068+00:00",
+    "project": "bondanomaly",
+    "type": "NO_CONVERSION_TRACKING",
+    "severity": "MEDIUM",
+    "detail": "outreach_log.csv tracks outreach (44 rows) but has no 'converted', 'subscribed', or 'stripe_customer' column. There is no way to know how many prospects became $299/month subscribers. Stripe-reading code found in: ['/home/u-ack-it/Projects/muni_scanner/ria_followup.py', '/home/u-ack-it/Projects/muni_scanner/ria_outreach.py', '/home/u-ack-it/Projects/muni_scanner/supervisor/l3_fixer_bondanomaly.py', '/home/u-ack-it/Projects/muni_scanner/supervisor/l2_bondanomaly.py'].",
+    "hypothesis": "The Stripe payment link (buy.stripe.com/...) handles checkout, but no Stripe webhook receiver or API poller exists to match subscriber emails against the prospect list. Revenue is invisible to the outreach pipeline.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv",
+      "stripe_setup.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-022",
+    "timestamp": "2026-05-13T07:13:20.208326+00:00",
+    "project": "muni_scanner",
+    "type": "ALERT_DROUGHT",
+    "severity": "MEDIUM",
+    "detail": "No output/alerts_YYYYMMDD.json file produced today (2026-05-13). Last scan output was 1 day(s) ago (sample). daily_scan.sh may not be scheduled or bond_scanner.py is failing.",
+    "hypothesis": "daily_scan.sh is not being called via cron or manual trigger. Alternatively, bond_scanner.py crashed on the CSV/mock data load, or the data/ directory has no incoming CSV to process.",
+    "files_to_check": [
+      "daily_scan.sh",
+      "bond_scanner.py",
+      "data/"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-023",
+    "timestamp": "2026-05-13T07:13:20.209172+00:00",
+    "project": "muni_scanner",
+    "type": "MEMORY_NOT_UPDATING",
+    "severity": "MEDIUM",
+    "detail": "3 alert ID(s) exist in output/ files but are absent from memory/alerts_log.md. Missing: ['MUNI-20260511-0AA1', 'MUNI-20260511-0CC3', 'MUNI-20260511-1RK8']. alerts_log.md currently has 4 non-header lines.",
+    "hypothesis": "daily_scan.sh calls bond_scanner.py directly (CLI), which writes output JSON but does NOT call _append_to_memory(). That function only runs via the API's POST /scan path (api.py:132). The CLI and API paths are diverged \u2014 memory only updates via API.",
+    "files_to_check": [
+      "api.py",
+      "bond_scanner.py",
+      "daily_scan.sh"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-024",
+    "timestamp": "2026-05-13T07:13:20.211500+00:00",
+    "project": "muni_scanner",
+    "type": "REGIME_COUPLING_LOST",
+    "severity": "LOW",
+    "detail": "Ouroboros regime snapshot is 249 min old (label=BULL, VIX=17.99). muni_scanner will revert to NEUTRAL threshold at next scan.",
+    "hypothesis": "Ouroboros heartbeat is in zombie hours \u2014 snapshot age during off-hours is expected. Only critical if a scan runs while stale.",
+    "files_to_check": [
+      "api.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-025",
+    "timestamp": "2026-05-13T07:13:20.224413+00:00",
+    "project": "muni_scanner",
+    "type": "EMAIL_AGENT_DUPLICATE",
+    "severity": "MEDIUM",
+    "detail": "20/39 consecutive log lines in bond_email_agent.log are exact duplicates. Active bond_email_agent processes: 1. Sample duplicate: '[03:05:45] No unread bond emails.'",
+    "hypothesis": "bond_email_agent.py was started twice (e.g. from two terminal sessions or a restart without killing the previous instance). Both processes log to the same file simultaneously. No emails are duplicated yet, but if both processes pick up the same unread message, double delivery is likely.",
+    "files_to_check": [
+      "bond_email_agent.py",
+      "logs/bond_email_agent.log"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-026",
+    "timestamp": "2026-05-13T07:28:20.274757+00:00",
+    "project": "muni_scanner",
+    "type": "API_SERVICE_DOWN",
+    "severity": "HIGH",
+    "detail": "No process found serving muni_scanner API on port 8000. POST /scan cannot be triggered. Email delivery via API is unavailable. Expected: uvicorn api:app --port 8000",
+    "hypothesis": "uvicorn was never started or crashed. daily_scan.sh calls bond_scanner.py directly (CLI path), but the API service must be running for webhook delivery, feedback, and /digest/send endpoints.",
+    "files_to_check": [
+      "api.py",
+      "AGENTS.md"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-027",
+    "timestamp": "2026-05-13T07:43:20.501815+00:00",
+    "project": "bondanomaly",
+    "type": "OUTREACH_DUPLICATE",
+    "severity": "HIGH",
+    "detail": "20 prospect(s) received duplicate outreach emails:\n  john@cumber.com: 2x (gap 1.0h)\n  service@bellehaven.com: 2x (gap 1.0h)\n  cr@breckinridge.com: 2x (gap 1.0h)\n  smcshea@sageadvisory.com: 2x (gap 1.0h)\n  info@smithcapitalinvestors.com: 2x (gap 1.0h)\n  ...\nRoot cause: ria_outreach.py has no guard against re-sending to addresses already in outreach_log.csv.",
+    "hypothesis": "ria_outreach.py reads all rows from prospects.csv and sends without cross-checking outreach_log.csv. Running the script twice (or from two terminals within the same session) sends the same email to every prospect again. The fix is to load the log and skip any email already present before calling the Gmail API.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-028",
+    "timestamp": "2026-05-13T07:43:20.502396+00:00",
+    "project": "bondanomaly",
+    "type": "LOG_CORRUPTION",
+    "severity": "MEDIUM",
+    "detail": "1 row(s) in outreach_log.csv have a non-ISO sent_at value:\n  email=sditursi@oneoakcapitalmgmt.com sent_at='there'\nAffected rows are invisible to nudge eligibility logic \u2014 nudge_sent timestamps on corrupt rows may fire incorrectly.",
+    "hypothesis": "prospect_hunter.py appends newly discovered prospects and may trigger outreach inline. If the contact_name contains a comma and the CSV write is unquoted, field values shift right \u2014 a name like 'LLC' lands in sent_at. Alternatively, 'there' is the name fallback in ria_outreach.py EMAIL_BODY.format() leaking into the log write call.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "prospect_hunter.py",
+      "outreach_log.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-029",
+    "timestamp": "2026-05-13T07:43:20.505837+00:00",
+    "project": "bondanomaly",
+    "type": "FOLLOWUP_CRON_BROKEN",
+    "severity": "HIGH",
+    "detail": "ria_followup.py cron entry has no working-directory prefix:\n  '0 9 * * 1-5 python3 ria_followup.py >> logs/ria_followup.log 2>&1'\nCron runs from $HOME by default. The relative log redirect 'logs/ria_followup.log' writes to ~/logs/ (or fails). SEND_LOG uses Path(__file__).parent which resolves correctly, but TOKEN_PATH = Path.home() / 'gallerysense/token.pickle' may not exist if gallerysense is not in $HOME.",
+    "hypothesis": "The cron was created with 'python3 ria_followup.py' without a preceding 'cd /home/u-ack-it/Projects/muni_scanner &&'. Output goes to ~/logs/ria_followup.log (may not exist), and if the Gmail token path differs, authentication fails silently.",
+    "files_to_check": [
+      "ria_followup.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-030",
+    "timestamp": "2026-05-13T07:43:20.506434+00:00",
+    "project": "bondanomaly",
+    "type": "PROSPECT_QUALITY_DRIFT",
+    "severity": "MEDIUM",
+    "detail": "11 prospect(s) in prospects.csv are low-quality targets (generic email or large asset manager, not boutique RIA):\n  Belle Haven Investments <service@bellehaven.com> [generic prefix]\n  Smith Capital Investors <info@smithcapitalinvestors.com> [generic prefix]\n  Reinhart Partners <info@reinhart-partnersinc.com> [generic prefix]\n  Aquila Group of Funds <info@aquilafunds.com> [generic prefix]\n  Segall Bryant & Hamill <contactus@sbhic.com> [generic prefix]\n  Hennion & Walsh <info@hennionandwalsh.com> [generic prefix]\nThese will dilute the $299/month pitch \u2014 Goldman Sachs won't subscribe.",
+    "hypothesis": "prospect_hunter.py uses Perplexity to discover firms then scrapes the first email found on the homepage. Large managers have generic emails (info@, compliance@) and irrelevant decision-makers. The hunter lacks a quality filter for firm AUM size or email role.",
+    "files_to_check": [
+      "prospect_hunter.py",
+      "prospects.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-031",
+    "timestamp": "2026-05-13T07:43:20.508987+00:00",
+    "project": "bondanomaly",
+    "type": "NO_CONVERSION_TRACKING",
+    "severity": "MEDIUM",
+    "detail": "outreach_log.csv tracks outreach (44 rows) but has no 'converted', 'subscribed', or 'stripe_customer' column. There is no way to know how many prospects became $299/month subscribers. Stripe-reading code found in: ['/home/u-ack-it/Projects/muni_scanner/ria_followup.py', '/home/u-ack-it/Projects/muni_scanner/ria_outreach.py', '/home/u-ack-it/Projects/muni_scanner/supervisor/l3_fixer_bondanomaly.py', '/home/u-ack-it/Projects/muni_scanner/supervisor/l2_bondanomaly.py'].",
+    "hypothesis": "The Stripe payment link (buy.stripe.com/...) handles checkout, but no Stripe webhook receiver or API poller exists to match subscriber emails against the prospect list. Revenue is invisible to the outreach pipeline.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv",
+      "stripe_setup.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-032",
+    "timestamp": "2026-05-13T17:29:31.109758+00:00",
+    "project": "muni_scanner",
+    "type": "API_SERVICE_DOWN",
+    "severity": "HIGH",
+    "detail": "No process found serving muni_scanner API on port 8000. POST /scan cannot be triggered. Email delivery via API is unavailable. Expected: uvicorn api:app --port 8000",
+    "hypothesis": "uvicorn was never started or crashed. daily_scan.sh calls bond_scanner.py directly (CLI path), but the API service must be running for webhook delivery, feedback, and /digest/send endpoints.",
+    "files_to_check": [
+      "api.py",
+      "AGENTS.md"
+    ],
+    "status": "RESOLVED",
+    "resolution": "## Diagnosis Summary\n\n**No code fix applied. This is a false escalation.**\n\n**Evidence:**\n1. `ps`/`ss` confirm: no uvicorn for `api:app` on :8000 \u2014 but also no launcher in the repo (no systemd unit, no cron, no startup script, not invoked by `daily_scan.sh`).\n2. `daily_scan.sh` runs `bond_scanner.py --csv \u2026` directly, then imports `bond_email_agent._email_alerts` inline. **The email path never touches `api.py`.**\n3. `bond_email_agent.py --loop` is actively running (PID 78369). Email delivery is ",
+    "resolved_at": "2026-05-13T17:30:09.370552+00:00"
+  },
+  {
+    "id": "muni-esc-20260513-033",
+    "timestamp": "2026-05-13T17:29:31.111334+00:00",
+    "project": "muni_scanner",
+    "type": "ALERT_DROUGHT",
+    "severity": "MEDIUM",
+    "detail": "No output/alerts_YYYYMMDD.json file produced today (2026-05-13). Last scan output was 1 day(s) ago (sample). daily_scan.sh may not be scheduled or bond_scanner.py is failing.",
+    "hypothesis": "daily_scan.sh is not being called via cron or manual trigger. Alternatively, bond_scanner.py crashed on the CSV/mock data load, or the data/ directory has no incoming CSV to process.",
+    "files_to_check": [
+      "daily_scan.sh",
+      "bond_scanner.py",
+      "data/"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-034",
+    "timestamp": "2026-05-13T17:29:31.124617+00:00",
+    "project": "muni_scanner",
+    "type": "MEMORY_NOT_UPDATING",
+    "severity": "MEDIUM",
+    "detail": "3 alert ID(s) exist in output/ files but are absent from memory/alerts_log.md. Missing: ['MUNI-20260511-0AA1', 'MUNI-20260511-0CC3', 'MUNI-20260511-1RK8']. alerts_log.md currently has 4 non-header lines.",
+    "hypothesis": "daily_scan.sh calls bond_scanner.py directly (CLI), which writes output JSON but does NOT call _append_to_memory(). That function only runs via the API's POST /scan path (api.py:132). The CLI and API paths are diverged \u2014 memory only updates via API.",
+    "files_to_check": [
+      "api.py",
+      "bond_scanner.py",
+      "daily_scan.sh"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-035",
+    "timestamp": "2026-05-13T17:29:31.126217+00:00",
+    "project": "muni_scanner",
+    "type": "REGIME_COUPLING_LOST",
+    "severity": "LOW",
+    "detail": "Ouroboros regime snapshot is 697 min old (label=BULL, VIX=17.88). muni_scanner will revert to NEUTRAL threshold at next scan.",
+    "hypothesis": "Ouroboros heartbeat is in zombie hours \u2014 snapshot age during off-hours is expected. Only critical if a scan runs while stale.",
+    "files_to_check": [
+      "api.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-036",
+    "timestamp": "2026-05-13T17:29:31.167400+00:00",
+    "project": "muni_scanner",
+    "type": "EMAIL_AGENT_DUPLICATE",
+    "severity": "MEDIUM",
+    "detail": "20/39 consecutive log lines in bond_email_agent.log are exact duplicates. Active bond_email_agent processes: 1. Sample duplicate: '[13:27:02] No unread bond emails.'",
+    "hypothesis": "bond_email_agent.py was started twice (e.g. from two terminal sessions or a restart without killing the previous instance). Both processes log to the same file simultaneously. No emails are duplicated yet, but if both processes pick up the same unread message, double delivery is likely.",
+    "files_to_check": [
+      "bond_email_agent.py",
+      "logs/bond_email_agent.log"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-037",
+    "timestamp": "2026-05-13T17:29:31.169479+00:00",
+    "project": "bondanomaly",
+    "type": "OUTREACH_DUPLICATE",
+    "severity": "HIGH",
+    "detail": "20 prospect(s) received duplicate outreach emails:\n  john@cumber.com: 2x (gap 1.0h)\n  service@bellehaven.com: 2x (gap 1.0h)\n  cr@breckinridge.com: 2x (gap 1.0h)\n  smcshea@sageadvisory.com: 2x (gap 1.0h)\n  info@smithcapitalinvestors.com: 2x (gap 1.0h)\n  ...\nRoot cause: ria_outreach.py has no guard against re-sending to addresses already in outreach_log.csv.",
+    "hypothesis": "ria_outreach.py reads all rows from prospects.csv and sends without cross-checking outreach_log.csv. Running the script twice (or from two terminals within the same session) sends the same email to every prospect again. The fix is to load the log and skip any email already present before calling the Gmail API.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv"
+    ],
+    "status": "RESOLVED",
+    "resolution": "Done.\n\n**Diagnosis:** `ria_outreach.py` sent to every row in `prospects.csv` with no read-back from `outreach_log.csv`. Log confirmed: 45 send rows / 29 unique prospects \u2192 16+ duplicates. Hypothesis from L2 verified.\n\n**Fix applied to `ria_outreach.py`** (confidence 0.95):\n1. New `_already_sent()` loads `outreach_log.csv` into a lowercased email set.\n2. `main()` seeds that set, then skips any prospect already in it with a `[DUP]` log line and `dup` counter.\n3. After each successful send, the add",
+    "resolved_at": "2026-05-13T17:30:42.984417+00:00"
+  },
+  {
+    "id": "muni-esc-20260513-038",
+    "timestamp": "2026-05-13T17:29:31.171216+00:00",
+    "project": "bondanomaly",
+    "type": "LOG_CORRUPTION",
+    "severity": "MEDIUM",
+    "detail": "1 row(s) in outreach_log.csv have a non-ISO sent_at value:\n  email=sditursi@oneoakcapitalmgmt.com sent_at='there'\nAffected rows are invisible to nudge eligibility logic \u2014 nudge_sent timestamps on corrupt rows may fire incorrectly.",
+    "hypothesis": "prospect_hunter.py appends newly discovered prospects and may trigger outreach inline. If the contact_name contains a comma and the CSV write is unquoted, field values shift right \u2014 a name like 'LLC' lands in sent_at. Alternatively, 'there' is the name fallback in ria_outreach.py EMAIL_BODY.format() leaking into the log write call.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "prospect_hunter.py",
+      "outreach_log.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-039",
+    "timestamp": "2026-05-13T17:29:31.175535+00:00",
+    "project": "bondanomaly",
+    "type": "FOLLOWUP_CRON_BROKEN",
+    "severity": "HIGH",
+    "detail": "ria_followup.py cron entry has no working-directory prefix:\n  '0 9 * * 1-5 python3 ria_followup.py >> logs/ria_followup.log 2>&1'\nCron runs from $HOME by default. The relative log redirect 'logs/ria_followup.log' writes to ~/logs/ (or fails). SEND_LOG uses Path(__file__).parent which resolves correctly, but TOKEN_PATH = Path.home() / 'gallerysense/token.pickle' may not exist if gallerysense is not in $HOME.",
+    "hypothesis": "The cron was created with 'python3 ria_followup.py' without a preceding 'cd /home/u-ack-it/Projects/muni_scanner &&'. Output goes to ~/logs/ria_followup.log (may not exist), and if the Gmail token path differs, authentication fails silently.",
+    "files_to_check": [
+      "ria_followup.py"
+    ],
+    "status": "RESOLVED",
+    "resolution": "## Diagnosis Summary\n\n**Verdict:** No code fix to `ria_followup.py` \u2014 it's correct. The bug is entirely in the crontab entry.\n\n**Evidence gathered:**\n1. `crontab -l` confirms the broken line: `0 9 * * 1-5 python3 ria_followup.py >> logs/ria_followup.log 2>&1` \u2014 no `cd`, no absolute paths.\n2. Adjacent entries (`daily_scan.sh`, `run_prospect_hunter.sh`, `emma_monitor.py`, `edgar_monitor.py`) all follow the correct pattern with absolute paths or wrapper scripts.\n3. `~/gallerysense/token.pickle` exi",
+    "resolved_at": "2026-05-13T17:31:27.528346+00:00"
+  },
+  {
+    "id": "muni-esc-20260513-040",
+    "timestamp": "2026-05-13T17:29:31.178340+00:00",
+    "project": "bondanomaly",
+    "type": "PROSPECT_QUALITY_DRIFT",
+    "severity": "MEDIUM",
+    "detail": "11 prospect(s) in prospects.csv are low-quality targets (generic email or large asset manager, not boutique RIA):\n  Belle Haven Investments <service@bellehaven.com> [generic prefix]\n  Smith Capital Investors <info@smithcapitalinvestors.com> [generic prefix]\n  Reinhart Partners <info@reinhart-partnersinc.com> [generic prefix]\n  Aquila Group of Funds <info@aquilafunds.com> [generic prefix]\n  Segall Bryant & Hamill <contactus@sbhic.com> [generic prefix]\n  Hennion & Walsh <info@hennionandwalsh.com> [generic prefix]\nThese will dilute the $299/month pitch \u2014 Goldman Sachs won't subscribe.",
+    "hypothesis": "prospect_hunter.py uses Perplexity to discover firms then scrapes the first email found on the homepage. Large managers have generic emails (info@, compliance@) and irrelevant decision-makers. The hunter lacks a quality filter for firm AUM size or email role.",
+    "files_to_check": [
+      "prospect_hunter.py",
+      "prospects.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-041",
+    "timestamp": "2026-05-13T17:29:31.184918+00:00",
+    "project": "bondanomaly",
+    "type": "NO_CONVERSION_TRACKING",
+    "severity": "MEDIUM",
+    "detail": "outreach_log.csv tracks outreach (45 rows) but has no 'converted', 'subscribed', or 'stripe_customer' column. There is no way to know how many prospects became $299/month subscribers. Stripe-reading code found in: ['/home/u-ack-it/Projects/muni_scanner/ria_followup.py', '/home/u-ack-it/Projects/muni_scanner/ria_outreach.py', '/home/u-ack-it/Projects/muni_scanner/supervisor/l3_fixer_bondanomaly.py', '/home/u-ack-it/Projects/muni_scanner/supervisor/l2_bondanomaly.py'].",
+    "hypothesis": "The Stripe payment link (buy.stripe.com/...) handles checkout, but no Stripe webhook receiver or API poller exists to match subscriber emails against the prospect list. Revenue is invisible to the outreach pipeline.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv",
+      "stripe_setup.py"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-042",
+    "timestamp": "2026-05-13T17:46:27.649631+00:00",
+    "project": "muni_scanner",
+    "type": "API_SERVICE_DOWN",
+    "severity": "HIGH",
+    "detail": "No process found serving muni_scanner API on port 8000. POST /scan cannot be triggered. Email delivery via API is unavailable. Expected: uvicorn api:app --port 8000",
+    "hypothesis": "uvicorn was never started or crashed. daily_scan.sh calls bond_scanner.py directly (CLI path), but the API service must be running for webhook delivery, feedback, and /digest/send endpoints.",
+    "files_to_check": [
+      "api.py",
+      "AGENTS.md"
+    ],
+    "status": "RESOLVED",
+    "resolution": "Diagnosis & fix complete.\n\n**Root cause:** Not a code bug. `api.py` is healthy and the Dockerfile correctly defines `uvicorn api:app` as CMD, but the host deployment isn't containerized and has no systemd unit or cron entry that boots the API. The only scheduled script \u2014 `daily_scan.sh` \u2014 runs `bond_scanner.py` as a CLI and exits, never starting the long-running service. This also explains the cluster of sibling escalations (#034 memory_not_updating, #036 email_duplicate) since those invariants ",
+    "resolved_at": "2026-05-13T17:47:30.714099+00:00"
+  },
+  {
+    "id": "muni-esc-20260513-043",
+    "timestamp": "2026-05-13T17:46:27.690486+00:00",
+    "project": "bondanomaly",
+    "type": "OUTREACH_DUPLICATE",
+    "severity": "HIGH",
+    "detail": "20 prospect(s) received duplicate outreach emails:\n  john@cumber.com: 2x (gap 1.0h)\n  service@bellehaven.com: 2x (gap 1.0h)\n  cr@breckinridge.com: 2x (gap 1.0h)\n  smcshea@sageadvisory.com: 2x (gap 1.0h)\n  info@smithcapitalinvestors.com: 2x (gap 1.0h)\n  ...\nRoot cause: ria_outreach.py has no guard against re-sending to addresses already in outreach_log.csv.",
+    "hypothesis": "ria_outreach.py reads all rows from prospects.csv and sends without cross-checking outreach_log.csv. Running the script twice (or from two terminals within the same session) sends the same email to every prospect again. The fix is to load the log and skip any email already present before calling the Gmail API.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv"
+    ],
+    "status": "RESOLVED",
+    "resolution": "## Summary\n\n**Diagnosis:**\n- `ria_outreach.py` **already** had the dedup guard (`_already_sent()` reading `outreach_log.csv` + skip-if-seen branch + in-loop `already.add`). The L2 root cause was correct historically, but the patch had already landed by the time I read the file.\n- The duplicate rows still sitting in `outreach_log.csv` (12 rows from a 17:43 no-guard re-run, plus 8 more at 17:45) revealed a **second, downstream bug**: `ria_followup.py` iterates the log row-by-row with **no email-le",
+    "resolved_at": "2026-05-13T17:48:54.268391+00:00"
+  },
+  {
+    "id": "muni-esc-20260513-044",
+    "timestamp": "2026-05-13T17:46:27.695063+00:00",
+    "project": "bondanomaly",
+    "type": "FOLLOWUP_CRON_BROKEN",
+    "severity": "HIGH",
+    "detail": "ria_followup.py cron entry has no working-directory prefix:\n  '0 9 * * 1-5 python3 ria_followup.py >> logs/ria_followup.log 2>&1'\nCron runs from $HOME by default. The relative log redirect 'logs/ria_followup.log' writes to ~/logs/ (or fails). SEND_LOG uses Path(__file__).parent which resolves correctly, but TOKEN_PATH = Path.home() / 'gallerysense/token.pickle' may not exist if gallerysense is not in $HOME.",
+    "hypothesis": "The cron was created with 'python3 ria_followup.py' without a preceding 'cd /home/u-ack-it/Projects/muni_scanner &&'. Output goes to ~/logs/ria_followup.log (may not exist), and if the Gmail token path differs, authentication fails silently.",
+    "files_to_check": [
+      "ria_followup.py"
+    ],
+    "status": "RESOLVED",
+    "resolution": "## Diagnosis Summary\n\n**Confirmed root cause:** Crontab line 10 lacks the `cd /home/u-ack-it/Projects/muni_scanner &&` prefix and absolute log path that every other muni_scanner cron entry uses.\n\n**Evidence:**\n- Other muni_scanner crons (daily_scan, emma_monitor, edgar_monitor) all use absolute paths \u2014 this one doesn't.\n- Cron cwd is `$HOME`, so `python3 ria_followup.py` cannot find the file at all; it dies before `Path(__file__)` is ever evaluated.\n- Stderr `>> logs/ria_followup.log` resolves t",
+    "resolved_at": "2026-05-13T17:49:28.106484+00:00"
+  },
+  {
+    "id": "muni-esc-20260513-045",
+    "timestamp": "2026-05-13T18:04:28.185795+00:00",
+    "project": "muni_scanner",
+    "type": "API_SERVICE_DOWN",
+    "severity": "HIGH",
+    "detail": "No process found serving muni_scanner API on port 8000. POST /scan cannot be triggered. Email delivery via API is unavailable. Expected: uvicorn api:app --port 8000",
+    "hypothesis": "uvicorn was never started or crashed. daily_scan.sh calls bond_scanner.py directly (CLI path), but the API service must be running for webhook delivery, feedback, and /digest/send endpoints.",
+    "files_to_check": [
+      "api.py",
+      "AGENTS.md"
+    ],
+    "status": "RESOLVED",
+    "resolution": "L3 complete",
+    "resolved_at": "2026-05-13T18:17:12.911903+00:00"
+  },
+  {
+    "id": "muni-esc-20260513-046",
+    "timestamp": "2026-05-13T18:04:28.215410+00:00",
+    "project": "bondanomaly",
+    "type": "OUTREACH_DUPLICATE",
+    "severity": "HIGH",
+    "detail": "20 prospect(s) received duplicate outreach emails:\n  john@cumber.com: 2x (gap 1.0h)\n  service@bellehaven.com: 2x (gap 1.0h)\n  cr@breckinridge.com: 2x (gap 1.0h)\n  smcshea@sageadvisory.com: 2x (gap 1.0h)\n  info@smithcapitalinvestors.com: 2x (gap 1.0h)\n  ...\nRoot cause: ria_outreach.py has no guard against re-sending to addresses already in outreach_log.csv.",
+    "hypothesis": "ria_outreach.py reads all rows from prospects.csv and sends without cross-checking outreach_log.csv. Running the script twice (or from two terminals within the same session) sends the same email to every prospect again. The fix is to load the log and skip any email already present before calling the Gmail API.",
+    "files_to_check": [
+      "ria_outreach.py",
+      "outreach_log.csv"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  },
+  {
+    "id": "muni-esc-20260513-047",
+    "timestamp": "2026-05-13T18:04:28.219173+00:00",
+    "project": "bondanomaly",
+    "type": "FOLLOWUP_CRON_BROKEN",
+    "severity": "HIGH",
+    "detail": "ria_followup.py cron entry has no working-directory prefix:\n  '0 9 * * 1-5 python3 ria_followup.py >> logs/ria_followup.log 2>&1'\nCron runs from $HOME by default. The relative log redirect 'logs/ria_followup.log' writes to ~/logs/ (or fails). SEND_LOG uses Path(__file__).parent which resolves correctly, but TOKEN_PATH = Path.home() / 'gallerysense/token.pickle' may not exist if gallerysense is not in $HOME.",
+    "hypothesis": "The cron was created with 'python3 ria_followup.py' without a preceding 'cd /home/u-ack-it/Projects/muni_scanner &&'. Output goes to ~/logs/ria_followup.log (may not exist), and if the Gmail token path differs, authentication fails silently.",
+    "files_to_check": [
+      "ria_followup.py"
+    ],
+    "status": "RESOLVED",
+    "resolution": "**Resolved \u2014 muni-esc-20260513-047**\n\n- **Root cause:** Crontab line for `ria_followup.py` lacked `cd /home/u-ack-it/Projects/muni_scanner &&` and used relative paths. Cron's CWD is `$HOME`, so Python couldn't find the script and the stderr redirect targeted a nonexistent `~/logs/`. Both failed silently \u2192 zero nudges sent.\n- **Not the cause:** L2's secondary hypothesis about `TOKEN_PATH` \u2014 `/home/u-ack-it/gallerysense/token.pickle` exists; that path is correct. Script code is fine.\n- **Fix:** Re",
+    "resolved_at": "2026-05-13T18:20:03.487719+00:00"
+  },
+  {
+    "id": "muni-esc-20260513-048",
+    "timestamp": "2026-05-13T18:35:03.578230+00:00",
+    "project": "muni_scanner",
+    "type": "API_SERVICE_DOWN",
+    "severity": "HIGH",
+    "detail": "No process found serving muni_scanner API on port 8000. POST /scan cannot be triggered. Email delivery via API is unavailable. Expected: uvicorn api:app --port 8000",
+    "hypothesis": "uvicorn was never started or crashed. daily_scan.sh calls bond_scanner.py directly (CLI path), but the API service must be running for webhook delivery, feedback, and /digest/send endpoints.",
+    "files_to_check": [
+      "api.py",
+      "AGENTS.md"
+    ],
+    "status": "RESOLVED",
+    "resolution": "L3 complete",
+    "resolved_at": "2026-05-13T18:36:18.436467+00:00"
+  },
+  {
+    "id": "muni-esc-20260513-049",
+    "timestamp": "2026-05-13T18:51:18.533808+00:00",
+    "project": "muni_scanner",
+    "type": "API_SERVICE_DOWN",
+    "severity": "HIGH",
+    "detail": "No process found serving muni_scanner API on port 8000. POST /scan cannot be triggered. Email delivery via API is unavailable. Expected: uvicorn api:app --port 8000",
+    "hypothesis": "uvicorn was never started or crashed. daily_scan.sh calls bond_scanner.py directly (CLI path), but the API service must be running for webhook delivery, feedback, and /digest/send endpoints.",
+    "files_to_check": [
+      "api.py",
+      "AGENTS.md"
+    ],
+    "status": "OPEN",
+    "resolution": null
+  }
+]

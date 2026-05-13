@@ -28,19 +28,44 @@ Statistical peer comparison runs first; the agent interprets results and surface
 ## How to run
 
 ```bash
+# One-time: install runtime deps (fastapi, uvicorn, httpx, jinja2, python-multipart)
+# REQUIRED before any API path works — daily_scan.sh's uvicorn launch will
+# silently crash with ModuleNotFoundError: No module named 'fastapi' otherwise.
+python3 -m pip install -r requirements.txt
+
 # Test with mock data (no files needed)
 python bond_scanner.py --mock
 
 # Run against CSV
 python bond_scanner.py --csv data/sample_bonds.csv
 
-# Start API server
+# Start API server (interpreter MUST have fastapi installed — see install step above)
 uvicorn api:app --reload --port 8000
 
 # Docker
 docker build -t muni-scanner .
 docker run -p 8000:8000 -e WEBHOOK_URLS=https://your-endpoint.com muni-scanner
 ```
+
+### Service health: is the API actually up?
+
+`daily_scan.sh` auto-starts uvicorn on :8000 if nothing is bound there, but
+it uses `python3 -m uvicorn` — i.e. whichever interpreter `python3` resolves
+to. If that interpreter does not have `fastapi` installed, uvicorn imports
+`api.py`, hits `from fastapi import ...`, and dies before binding the port.
+The CLI scanner path keeps working, but `/scan`, `/alerts/{id}/feedback`,
+`/digest/send`, and webhook delivery all stay dark.
+
+Quick check:
+```bash
+ss -tln | grep ':8000 '         # should show LISTEN
+tail -20 logs/api.log           # look for ModuleNotFoundError
+ls logs/api_down.flag           # present => last start attempt failed
+```
+
+If `fastapi` is missing, `pip install -r requirements.txt` against the same
+interpreter `python3` points to. Do not assume the project `.venv` is the
+one being used — `daily_scan.sh` does not activate it.
 
 ---
 

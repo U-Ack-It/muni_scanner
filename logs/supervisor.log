@@ -1,0 +1,1072 @@
+[Telegram] pyTelegramBotAPI not installed — notifications disabled
+[Telegram] pyTelegramBotAPI not installed — notifications disabled
+[Telegram] pyTelegramBotAPI not installed — notifications disabled
+[Telegram] pyTelegramBotAPI not installed — notifications disabled
+[Supervisor] Starting — muni_scanner + BondAnomaly, L2 every 15 min, L3 on HIGH
+
+[Supervisor] Scan at 16:40:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+[Telegram] pyTelegramBotAPI not installed — notifications disabled
+[Telegram] pyTelegramBotAPI not installed — notifications disabled
+[Telegram] pyTelegramBotAPI not installed — notifications disabled
+[Telegram] pyTelegramBotAPI not installed — notifications disabled
+[Supervisor] Starting — muni_scanner + BondAnomaly, L2 every 15 min, L3 on HIGH
+
+[Supervisor] Scan at 16:41:58
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 16:56:58
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 17:11:58
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 17:26:58
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 17:41:58
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 17:56:58
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 18:11:58
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 18:26:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 18:41:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 18:56:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 19:11:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 19:26:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 19:41:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 19:56:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 20:11:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 20:26:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 20:41:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 20:56:59
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 21:12:00
+[L2-muni] API_SERVICE_DOWN: ESCALATED → muni-esc-20260512-011 (HIGH)
+[L2-muni] ALERT_DROUGHT: ESCALATED → muni-esc-20260512-012 (MEDIUM)
+[L2-muni] MEMORY_NOT_UPDATING: ESCALATED → muni-esc-20260512-013 (MEDIUM)
+[L2-muni] REGIME_COUPLING_LOST: ESCALATED → muni-esc-20260512-014 (LOW)
+[L2-muni] EMAIL_AGENT_DUPLICATE: ESCALATED → muni-esc-20260512-015 (MEDIUM)
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260512-011 → L3
+[Supervisor] L3 PROPOSED: muni-esc-20260512-011
+[Supervisor] muni-esc-20260512-012 (MEDIUM) — Telegram sent
+[Supervisor] muni-esc-20260512-013 (MEDIUM) — Telegram sent
+[Supervisor] muni-esc-20260512-014 (LOW) — Telegram sent
+[Supervisor] muni-esc-20260512-015 (MEDIUM) — Telegram sent
+
+[Supervisor] Scan at 21:27:32
+[L2-muni] API_SERVICE_DOWN: ESCALATED → muni-esc-20260512-016 (HIGH)
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260512-016 → L3
+[Supervisor] L3 error: 'root_cause'
+
+[Supervisor] Scan at 21:43:18
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: ESCALATED → muni-esc-20260512-017 (HIGH)
+[L2-bond] LOG_CORRUPTION: ESCALATED → muni-esc-20260512-018 (MEDIUM)
+[L2-bond] FOLLOWUP_CRON_BROKEN: ESCALATED → muni-esc-20260512-019 (HIGH)
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: ESCALATED → muni-esc-20260512-020 (MEDIUM)
+[L2-bond] NO_CONVERSION_TRACKING: ESCALATED → muni-esc-20260512-021 (MEDIUM)
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260512-017 → L3
+[Supervisor] L3 error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cayihw13hrZyaJMQP2jYG'}
+[Supervisor] muni-esc-20260512-018 (MEDIUM) — Telegram sent
+[Supervisor] Routing muni-esc-20260512-019 → L3
+[Supervisor] L3 error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cayihwgipt9Yfa3TeirDw'}
+[Supervisor] muni-esc-20260512-020 (MEDIUM) — Telegram sent
+[Supervisor] muni-esc-20260512-021 (MEDIUM) — Telegram sent
+
+[Supervisor] Scan at 21:58:18
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 22:13:18
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 22:28:18
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 22:43:18
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 22:58:18
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 23:13:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 23:28:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 23:43:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 23:58:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 00:13:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 00:28:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 00:43:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 00:58:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 01:13:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 01:28:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 01:43:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 01:58:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 02:13:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 02:28:19
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 02:43:20
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 02:58:20
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 03:13:20
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: ESCALATED → muni-esc-20260513-022 (MEDIUM)
+[L2-muni] MEMORY_NOT_UPDATING: ESCALATED → muni-esc-20260513-023 (MEDIUM)
+[L2-muni] REGIME_COUPLING_LOST: ESCALATED → muni-esc-20260513-024 (LOW)
+[L2-muni] EMAIL_AGENT_DUPLICATE: ESCALATED → muni-esc-20260513-025 (MEDIUM)
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] muni-esc-20260513-022 (MEDIUM) — Telegram sent
+[Supervisor] muni-esc-20260513-023 (MEDIUM) — Telegram sent
+[Supervisor] muni-esc-20260513-024 (LOW) — Telegram sent
+[Supervisor] muni-esc-20260513-025 (MEDIUM) — Telegram sent
+
+[Supervisor] Scan at 03:28:20
+[L2-muni] API_SERVICE_DOWN: ESCALATED → muni-esc-20260513-026 (HIGH)
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260513-026 → L3
+[Supervisor] L3 error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CazB1xW7KQKV1kL5F491Z'}
+
+[Supervisor] Scan at 03:43:20
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: ESCALATED → muni-esc-20260513-027 (HIGH)
+[L2-bond] LOG_CORRUPTION: ESCALATED → muni-esc-20260513-028 (MEDIUM)
+[L2-bond] FOLLOWUP_CRON_BROKEN: ESCALATED → muni-esc-20260513-029 (HIGH)
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: ESCALATED → muni-esc-20260513-030 (MEDIUM)
+[L2-bond] NO_CONVERSION_TRACKING: ESCALATED → muni-esc-20260513-031 (MEDIUM)
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260513-027 → L3
+[Supervisor] L3 error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CazCAKGcREFgTnuvC91kF'}
+[Supervisor] muni-esc-20260513-028 (MEDIUM) — Telegram sent
+[Supervisor] Routing muni-esc-20260513-029 → L3
+[Supervisor] L3 error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CazCAKuKH9cm8hZ96bqPu'}
+[Supervisor] muni-esc-20260513-030 (MEDIUM) — Telegram sent
+[Supervisor] muni-esc-20260513-031 (MEDIUM) — Telegram sent
+
+[Supervisor] Scan at 03:58:20
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 04:13:20
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 04:28:20
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 04:43:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 04:58:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 05:13:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 05:28:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 05:43:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 05:58:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 06:13:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 06:28:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 06:43:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 06:58:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 07:13:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 07:28:21
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 07:43:22
+[L2-muni] API_SERVICE_DOWN: DETECTED but escalation already open — skipping
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: DETECTED — escalation already open, skipping
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+
+[Supervisor] Scan at 13:29:31
+[L2-muni] API_SERVICE_DOWN: ESCALATED → muni-esc-20260513-032 (HIGH)
+[L2-muni] ALERT_DROUGHT: ESCALATED → muni-esc-20260513-033 (MEDIUM)
+[L2-muni] MEMORY_NOT_UPDATING: ESCALATED → muni-esc-20260513-034 (MEDIUM)
+[L2-muni] REGIME_COUPLING_LOST: ESCALATED → muni-esc-20260513-035 (LOW)
+[L2-muni] EMAIL_AGENT_DUPLICATE: ESCALATED → muni-esc-20260513-036 (MEDIUM)
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: ESCALATED → muni-esc-20260513-037 (HIGH)
+[L2-bond] LOG_CORRUPTION: ESCALATED → muni-esc-20260513-038 (MEDIUM)
+[L2-bond] FOLLOWUP_CRON_BROKEN: ESCALATED → muni-esc-20260513-039 (HIGH)
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: ESCALATED → muni-esc-20260513-040 (MEDIUM)
+[L2-bond] NO_CONVERSION_TRACKING: ESCALATED → muni-esc-20260513-041 (MEDIUM)
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260513-032 → L3
+[Supervisor] L3 PROPOSED: muni-esc-20260513-032
+[Supervisor] muni-esc-20260513-033 (MEDIUM) — Telegram sent
+[Supervisor] muni-esc-20260513-034 (MEDIUM) — Telegram sent
+[Supervisor] muni-esc-20260513-035 (LOW) — Telegram sent
+[Supervisor] muni-esc-20260513-036 (MEDIUM) — Telegram sent
+[Supervisor] Routing muni-esc-20260513-037 → L3
+[Supervisor] L3 FIXED: muni-esc-20260513-037
+[Supervisor] muni-esc-20260513-038 (MEDIUM) — Telegram sent
+[Supervisor] Routing muni-esc-20260513-039 → L3
+[Supervisor] L3 PROPOSED: muni-esc-20260513-039
+[Supervisor] muni-esc-20260513-040 (MEDIUM) — Telegram sent
+[Supervisor] muni-esc-20260513-041 (MEDIUM) — Telegram sent
+
+[Supervisor] Scan at 13:46:27
+[L2-muni] API_SERVICE_DOWN: ESCALATED → muni-esc-20260513-042 (HIGH)
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: ESCALATED → muni-esc-20260513-043 (HIGH)
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: ESCALATED → muni-esc-20260513-044 (HIGH)
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260513-042 → L3
+[Supervisor] L3 FIXED: muni-esc-20260513-042
+[Supervisor] Routing muni-esc-20260513-043 → L3
+[Supervisor] L3 FIXED: muni-esc-20260513-043
+[Supervisor] Routing muni-esc-20260513-044 → L3
+[Supervisor] L3 PROPOSED: muni-esc-20260513-044
+
+[Supervisor] Scan at 14:04:28
+[L2-muni] API_SERVICE_DOWN: ESCALATED → muni-esc-20260513-045 (HIGH)
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: ESCALATED → muni-esc-20260513-046 (HIGH)
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: ESCALATED → muni-esc-20260513-047 (HIGH)
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260513-045 → L3
+[Supervisor] L3 FIXED: muni-esc-20260513-045
+[Supervisor] Routing muni-esc-20260513-046 → L3
+[Supervisor] L3 error: Error code: 500 - {'type': 'error', 'error': {'type': 'api_error', 'message': 'Internal server error'}, 'request_id': 'req_011Cb12WHrgN19VEFwNXJL4j'}
+[Supervisor] Routing muni-esc-20260513-047 → L3
+[Supervisor] L3 PROPOSED: muni-esc-20260513-047
+
+[Supervisor] Scan at 14:35:03
+[L2-muni] API_SERVICE_DOWN: ESCALATED → muni-esc-20260513-048 (HIGH)
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: OK
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260513-048 → L3
+[Supervisor] L3 FIXED: muni-esc-20260513-048
+
+[Supervisor] Scan at 14:51:18
+[L2-muni] API_SERVICE_DOWN: ESCALATED → muni-esc-20260513-049 (HIGH)
+[L2-muni] ALERT_DROUGHT: DETECTED but escalation already open — skipping
+[L2-muni] MEMORY_NOT_UPDATING: DETECTED but escalation already open — skipping
+[L2-muni] REGIME_COUPLING_LOST: DETECTED but escalation already open — skipping
+[L2-muni] EMAIL_AGENT_DUPLICATE: DETECTED but escalation already open — skipping
+[L2-muni] SCAN_ZERO_ALERTS: OK
+[L2-bond] OUTREACH_DUPLICATE: DETECTED — escalation already open, skipping
+[L2-bond] LOG_CORRUPTION: DETECTED — escalation already open, skipping
+[L2-bond] FOLLOWUP_CRON_BROKEN: OK
+[L2-bond] NUDGE_OVERDUE: OK
+[L2-bond] PROSPECT_QUALITY_DRIFT: DETECTED — escalation already open, skipping
+[L2-bond] NO_CONVERSION_TRACKING: DETECTED — escalation already open, skipping
+[L2-bond] STRIPE_UNTRACKED: OK
+[Supervisor] Routing muni-esc-20260513-049 → L3
+[Supervisor] L3 error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cb156esADqWtcCtZoEvHQ'}

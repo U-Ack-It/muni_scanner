@@ -1,0 +1,26 @@
+domain,bucket,detail
+aquilafunds.com,dead,"no MX, no A"
+bellehaven.com,deliverable,MX: bellehaven-com.mail.protection.outlook.com
+breckinridge.com,deliverable,"MX: us-smtp-inbound-1.mimecast.com, us-smtp-inbound-2.mimecast.com"
+brownadvisory.com,deliverable,"MX: mx0a-0014fd01.pphosted.com, mx0b-0014fd01.pphosted.com"
+confluenceim.com,deliverable,MX: confluenceim-com.mail.protection.outlook.com
+cumber.com,deliverable,"MX: mx1-us1.ppe-hosted.com, mx2-us1.ppe-hosted.com"
+dupree-funds.com,deliverable,"MX: dupree-funds.com.1.0001.arsmtp.com, dupree-funds.com.2.0001.arsmtp.com"
+dws.com,deliverable,"MX: smtp12.db.com, smtp15.db.com, smtp22.db.com, smtp23.db.com, smtp25.db.com"
+email.com,deliverable,"MX: mx00.mail.com, mx01.mail.com"
+firecapital.co,deliverable,MX: firecapital-co.mail.protection.outlook.com
+gs.com,deliverable,"MX: mxa-0014b501.gslb.pphosted.com, mxb-0014b501.gslb.pphosted.com"
+gwkinvest.com,deliverable,"MX: us-smtp-inbound-1.mimecast.com, us-smtp-inbound-2.mimecast.com"
+hennionandwalsh.com,deliverable,"MX: d188924a.ess.barracudanetworks.com, d188924b.ess.barracudanetworks.com"
+homesteadfunds.com,deliverable,"MX: mxa-0036a001.gslb.pphosted.com, mxb-0036a001.gslb.pphosted.com"
+incomeresearch.com,deliverable,MX: incomeresearch-com.mail.protection.outlook.com
+loomissayles.com,deliverable,"MX: mxa-00196201.gslb.pphosted.com, mxb-00196201.gslb.pphosted.com"
+mairsandpower.com,deliverable,"MX: mx1-us1.ppe-hosted.com, mx2-us1.ppe-hosted.com"
+oneoakcapitalmgmt.com,deliverable,"MX: oneoakcapitalmgmt.com.1.0001.arsmtp.com, oneoakcapitalmgmt.com.2.0001.arsmtp.com"
+reinhart-partnersinc.com,deliverable,MX: reinhartpartnersinc-com02b.mail.protection.outlook.com
+riverbendcapitaladvisors.com,deliverable,"MX: d349696a.ess.barracudanetworks.com, d349696b.ess.barracudanetworks.com"
+sageadvisory.com,deliverable,MX: sageadvisory-com.mail.protection.outlook.com
+sbhic.com,deliverable,MX: sbhic-com.mail.protection.outlook.com
+sitinvest.com,deliverable,"MX: smtp1-mke.securence.com, smtp1-msp.securence.com"
+smithcapitalinvestors.com,deliverable,MX: smithcapitalinvestors-com.mail.protection.outlook.com
+thornburg.com,deliverable,MX: thornburg-com.mail.protection.outlook.com
